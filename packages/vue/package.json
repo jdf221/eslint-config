@@ -1,0 +1,19 @@
+{
+  "name": "@jdf221/eslint-config-vue",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Jared (https://github.com/jdf221)",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@jdf221/eslint-config-basic": "^0.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint-plugin-prettier-vue": "^3.0.0-alpha.2",
+    "eslint-plugin-vue": "^7.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

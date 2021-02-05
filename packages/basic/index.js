@@ -1,17 +1,26 @@
 module.exports = {
   env: { es6: true },
+  plugins: ["html"],
   extends: [
-    "eslint:recommended",
     "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:unicorn/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:unicorn/recommended",
   ],
   rules: {
     "prettier/prettier": "error",
     indent: ["error", 2],
     quotes: ["error", "double"],
-    "import/order": ["error"],
+    "import/order": "error",
+    "no-var": "error",
+    "prefer-const": [
+      "error",
+      {
+        destructuring: "any",
+        ignoreReadBeforeAssign: true,
+      },
+    ],
     "spaced-comment": [1, "always"],
     "unicorn/filename-case": "off",
   },
