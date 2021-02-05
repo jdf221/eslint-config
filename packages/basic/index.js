@@ -15,4 +15,5 @@ module.exports = {
     "spaced-comment": [1, "always"],
     "unicorn/filename-case": "off",
   },
+  ignorePatterns: ["node_modules"],
 };
