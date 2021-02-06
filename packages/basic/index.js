@@ -12,8 +12,10 @@ module.exports = {
     "prettier/prettier": "error",
     indent: ["error", 2],
     quotes: ["error", "double"],
+    "prefer-template": "error",
     "import/order": "error",
     "no-var": "error",
+    eqeqeq: ["error", "smart"],
     "prefer-const": [
       "error",
       {
@@ -24,5 +26,18 @@ module.exports = {
     "spaced-comment": [1, "always"],
     "unicorn/filename-case": "off",
   },
+  overrides: [
+    {
+      files: [
+        "./*.config.js",
+        "**/.eslintrc.js",
+        "**/postcss.config.js",
+        "**/tailwind.config.js",
+      ],
+      env: {
+        node: true,
+      },
+    },
+  ],
   ignorePatterns: ["node_modules"],
 };
