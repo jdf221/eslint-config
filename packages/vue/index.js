@@ -5,10 +5,10 @@ module.exports = {
   plugins: ["vue"],
   extends: [
     "@jdf221/eslint-config-basic",
-    "prettier/vue",
-    "plugin:prettier-vue/recommended",
     "plugin:vue/vue3-recommended",
     "@vue/typescript/recommended",
+    "plugin:prettier-vue/recommended",
+    "prettier/vue",
   ],
   rules: {},
 };

@@ -7,5 +7,10 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
   ],
-  rules: {},
+  rules: {
+    // These 2 rules slightly conflict with Prettier
+    // Prettier still enforces 2 space indents, but it has a few cases where it will (rightfully) indent another 2
+    indent: "off",
+    "@typescript-eslint/indent": "off",
+  },
 };
