@@ -12,5 +12,9 @@ module.exports = {
     // Prettier still enforces 2 space indents, but it has a few cases where it will (rightfully) indent another 2
     indent: "off",
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      { allow: ["private-constructors"] },
+    ],
   },
 };

@@ -14,6 +14,7 @@ module.exports = {
     quotes: ["error", "double"],
     "prefer-template": "error",
     "import/order": "error",
+    "import/no-unresolved": "off", // Really just causes issues, any half decent editor will show errors for this anyways
     "no-var": "error",
     eqeqeq: ["error", "smart"],
     "prefer-const": [
@@ -25,6 +26,18 @@ module.exports = {
     ],
     "spaced-comment": [1, "always"],
     "unicorn/filename-case": "off",
+    "unicorn/prefer-ternary": "off",
+    yoda: "error",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          res: {
+            result: false,
+          },
+        },
+      },
+    ],
   },
   overrides: [
     {
