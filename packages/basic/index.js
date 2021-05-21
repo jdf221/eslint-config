@@ -47,6 +47,7 @@ module.exports = {
           dir: {
             direction: false,
           },
+          dev: false,
         },
       },
     ],
