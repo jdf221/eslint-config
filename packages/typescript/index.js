@@ -5,13 +5,8 @@ module.exports = {
     "@jdf221/eslint-config-basic",
     "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:import/typescript",
   ],
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: ["tsconfig.json"],
-  },
   rules: {
     // These 2 rules slightly conflict with Prettier
     // Prettier still enforces 2 space indents, but it has a few cases where it will (rightfully) indent another 2
