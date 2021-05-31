@@ -1,5 +1,8 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    extraFileExtensions: [".vue"],
+  },
   plugins: ["@typescript-eslint"],
   extends: [
     "@jdf221/eslint-config-basic",
@@ -8,8 +11,6 @@ module.exports = {
     "plugin:import/typescript",
   ],
   rules: {
-    // These 2 rules slightly conflict with Prettier
-    // Prettier still enforces 2 space indents, but it has a few cases where it will (rightfully) indent another 2
     indent: "off",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-empty-function": [
