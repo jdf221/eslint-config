@@ -16,6 +16,5 @@ module.exports = {
       "error",
       { allow: ["private-constructors"] },
     ],
-    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
   },
 };

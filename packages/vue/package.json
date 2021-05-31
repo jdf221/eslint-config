@@ -9,11 +9,11 @@
   ],
   "dependencies": {
     "@jdf221/eslint-config-basic": "^0.1.2",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "eslint-plugin-prettier-vue": "^3.0.0-alpha.2",
-    "eslint-plugin-vue": "^7.5.0"
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^7.10.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "devDependencies": {}
 }
