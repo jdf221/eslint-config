@@ -8,7 +8,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@jdf221/eslint-config-basic": "^0.1.8",
+    "@jdf221/eslint-config-basic": "latest",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0"
   },

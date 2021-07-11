@@ -1,12 +1,10 @@
 module.exports = {
   env: { es6: true },
-  plugins: ["html"],
+  plugins: ["html", "simple-import-sort", "import"],
   extends: [
     "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:unicorn/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
   ],
   rules: {
     "prettier/prettier": "error",
@@ -16,10 +14,49 @@ module.exports = {
     quotes: ["error", "double"],
     curly: ["error", "multi-line"],
     "spaced-comment": [1, "always"],
-    "import/order": "error",
     "unicorn/filename-case": "off",
     "unicorn/prefer-ternary": "off",
     yoda: "error",
+
+    "import/first": "error",
+    "import/no-duplicates": "error",
+    "import/newline-after-import": "error",
+    "import/extensions": [
+      "error",
+      {
+        ignorePackages: true,
+        pattern: { ts: "never", js: "never", vue: "always", json: "always" },
+      },
+    ],
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        allowArrowFunction: true,
+        allowAnonymousFunction: true,
+      },
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        groups: [
+          // Node.js built ins
+          [`^(${require("module").builtinModules.join("|")})(/|$)`],
+          // Packages
+          ["^\\w"],
+          // Internal files
+          ["^(~/)(/*)"],
+          // Parent (..) imports
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Relative imports
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Side effect imports
+          ["^\\u0000"],
+          // Style imports
+          ["^.+\\.s?css$"],
+        ],
+      },
+    ],
 
     // Implementations (affects the code beyond just changing spacing/order)
     "prefer-template": "error",
