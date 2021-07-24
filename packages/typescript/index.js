@@ -1,3 +1,5 @@
+const util = require("@jdf221/eslint-config-basic/util");
+
 module.exports = {
   parserOptions: {
     parser: "@typescript-eslint/parser",
@@ -18,4 +20,14 @@ module.exports = {
       { allow: ["private-constructors"] },
     ],
   },
+  overrides: [
+    util.configFileOverride(
+      {
+        rules: {
+          "@typescript-eslint/no-var-requires": "off",
+        },
+      },
+      ["js"]
+    ),
+  ],
 };

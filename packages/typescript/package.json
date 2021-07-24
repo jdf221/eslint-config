@@ -1,6 +1,6 @@
 {
   "name": "@jdf221/eslint-config-typescript",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "license": "MIT",
   "author": "Jared (https://github.com/jdf221)",
   "main": "index.js",

@@ -1,4 +1,5 @@
 const chalk = require("chalk");
+const util = require("./util");
 
 module.exports = {
   env: { es6: true },
@@ -106,21 +107,11 @@ module.exports = {
   },
   overrides: [
     // Config files are normally executed within a Node environment
-    {
-      files: [
-        "./*.config.js",
-        "**/.eslintrc.js",
-        "**/postcss.config.js",
-        "**/tailwind.config.js",
-        "**/windi.config.js",
-      ],
+    util.configFileOverride({
       env: {
         node: true,
       },
-      rules: {
-        "@typescript-eslint/no-var-requires": "off",
-      },
-    },
+    }),
   ],
 
   ignorePatterns: ["node_modules", "dist"],
