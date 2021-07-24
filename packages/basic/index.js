@@ -1,3 +1,5 @@
+const chalk = require("chalk");
+
 module.exports = {
   env: { es6: true },
   plugins: ["html", "simple-import-sort", "import"],
@@ -57,6 +59,19 @@ module.exports = {
         ],
       },
     ],
+    "no-restricted-imports": [
+      "error",
+      {
+        patterns: [
+          {
+            group: ["*/../*", "../*"],
+            message: `\n\t\t-> No relative parent imports, use a path mapping or use ${chalk.inverse(
+              "//eslint-disable-[next-]line no-restricted-imports"
+            )}`,
+          },
+        ],
+      },
+    ],
 
     // Implementations (affects the code beyond just changing spacing/order)
     "prefer-template": "error",
@@ -102,7 +117,11 @@ module.exports = {
       env: {
         node: true,
       },
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
     },
   ],
+
   ignorePatterns: ["node_modules", "dist"],
 };
