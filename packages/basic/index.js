@@ -8,6 +8,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:unicorn/recommended",
+    "plugin:jsonc/base",
   ],
   rules: {
     "prettier/prettier": "error",
@@ -112,6 +113,50 @@ module.exports = {
         node: true,
       },
     }),
+    // Specific JSON key orders
+    {
+      files: ["tsconfig.json"],
+      rules: {
+        "jsonc/sort-keys": [
+          "error",
+          {
+            pathPattern: ".*",
+            order: [
+              "strict",
+              "incremental",
+              "moduleResolution",
+              "esModuleInterop",
+              "skipLibCheck",
+              "noUnusedLocals",
+              "resolveJsonModule",
+              "forceConsistentCasingInFileNames",
+              "exactOptionalPropertyTypes",
+              "noImplicitOverride",
+              "rootDir",
+            ],
+          },
+        ],
+      },
+    },
+    {
+      files: ["package.json"],
+      rules: {
+        "jsonc/sort-keys": [
+          "error",
+          {
+            pathPattern: ".*",
+            order: [
+              "name",
+              "description",
+              "version",
+              "private",
+              "author",
+              "license",
+            ],
+          },
+        ],
+      },
+    },
   ],
 
   ignorePatterns: ["node_modules", "dist"],
