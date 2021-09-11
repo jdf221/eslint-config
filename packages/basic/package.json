@@ -1,8 +1,8 @@
 {
   "name": "@jdf221/eslint-config-basic",
   "version": "0.1.13",
-  "license": "MIT",
   "author": "Jared (https://github.com/jdf221)",
+  "license": "MIT",
   "main": "index.js",
   "files": [
     "index.js",
