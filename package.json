@@ -1,14 +1,10 @@
 {
   "name": "@jdf221/eslint-config",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint --fix ."
-    }
-  },
   "devDependencies": {
-    "eslint": "^7.19.0",
-    "husky": "^4.3.8"
+    "@jdf221/eslint-config-basic": "latest",
+    "eslint": "^8.5.0",
+    "prettier": "^2.5.1"
   },
   "workspaces": [
     "packages/*"

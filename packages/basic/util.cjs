@@ -23,3 +23,7 @@ module.exports.configFileOverride = function (
 
   return options;
 };
+
+module.exports.ansiInverseText = function (string) {
+  return "\033[7m" + string +"\033[m";
+};

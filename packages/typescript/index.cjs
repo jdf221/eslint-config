@@ -1,4 +1,4 @@
-const util = require("@jdf221/eslint-config-basic/util");
+const util = require("@jdf221/eslint-config-basic/util.cjs");
 
 module.exports = {
   parserOptions: {
@@ -8,7 +8,6 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   extends: [
     "@jdf221/eslint-config-basic",
-    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
   ],

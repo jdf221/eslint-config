@@ -1,26 +1,24 @@
 {
   "name": "@jdf221/eslint-config-basic",
-  "version": "0.1.13",
+  "version": "0.2.0",
   "author": "Jared (https://github.com/jdf221)",
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.cjs",
   "files": [
-    "index.js",
-    "util.js"
+    "index.cjs",
+    "util.cjs"
   ],
   "dependencies": {
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^29.0.0",
-    "eslint-plugin-jsonc": "^1.6.0"
+    "eslint-plugin-unicorn": "^39.0.0",
+    "eslint-plugin-jsonc": "^2.0.0",
+    "chalk": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@types/eslint-plugin-prettier": "^3.1.0"
   }
 }

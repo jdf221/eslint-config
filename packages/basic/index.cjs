@@ -1,5 +1,4 @@
-const chalk = require("chalk");
-const util = require("./util");
+const util = require("./util.cjs");
 
 module.exports = {
   env: { es6: true },
@@ -67,7 +66,7 @@ module.exports = {
         patterns: [
           {
             group: ["*/../*", "../*"],
-            message: `\n\t\t-> No relative parent imports, use a path mapping or use ${chalk.inverse(
+            message: `\n\t\t-> No relative parent imports, use a path mapping or use ${util.ansiInverseText(
               "//eslint-disable-[next-]line no-restricted-imports"
             )}`,
           },
@@ -90,7 +89,7 @@ module.exports = {
     "unicorn/prevent-abbreviations": [
       "error",
       {
-        whitelist: {
+        allowList: {
           props: true,
         },
         replacements: {
