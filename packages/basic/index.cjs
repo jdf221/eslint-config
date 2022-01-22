@@ -111,6 +111,9 @@ module.exports = {
       env: {
         node: true,
       },
+      rules: {
+        "unicorn/prefer-module": "off",
+      },
     }),
     // Specific JSON key orders
     {
