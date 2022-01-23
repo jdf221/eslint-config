@@ -65,7 +65,7 @@ module.exports = {
       {
         patterns: [
           {
-            group: ["*/../*", "../*"],
+            group: ["*/../../*", "../../*"],
             message: `\n\t\t-> No relative parent imports, use a path mapping or use ${util.ansiInverseText(
               "//eslint-disable-[next-]line no-restricted-imports"
             )}`,
@@ -91,6 +91,7 @@ module.exports = {
       {
         allowList: {
           props: true,
+          env: true,
         },
         replacements: {
           args: false,
